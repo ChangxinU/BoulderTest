@@ -1,0 +1,28 @@
+project:
+  name: climb-hold-segmentation
+  task: hold-segmentation
+
+data:
+  root: ml/data
+  train_split: train
+  val_split: val
+  test_split: test
+  class_names:
+    - hold
+
+model:
+  family: placeholder
+  name: lightweight-baseline
+  input_size: [640, 640]
+  confidence_threshold: 0.25
+  nms_threshold: 0.5
+
+postprocess:
+  min_area: 20
+  simplify_epsilon: 2.0
+  output_normalized_points: true
+
+export:
+  target: coreml
+  image_input_name: image
+  notes: "Fill in after real model choice is implemented"
