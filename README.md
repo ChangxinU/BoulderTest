@@ -28,6 +28,21 @@ It already includes:
   - Core ML export
 - iOS integration contract documentation
 
+
+## Dataset download (Kaggle)
+Use the helper script to download the requested dataset into `ml/data/`:
+
+```bash
+python ml/tools/download_kaggle_dataset.py --output-dir ml/data
+```
+
+Requirements:
+- Kaggle CLI installed (`kaggle`)
+- Kaggle API credentials configured (`~/.kaggle/kaggle.json` or env vars)
+
+Dataset:
+- `tomasslama/indoor-climbing-gym-hold-segmentation`
+
 ## Suggested workflow
 1. Put a representative subset of the climbing dataset into `ml/data/`.
 2. Update `docs/dataset_spec.md` with the real annotation format if known.
