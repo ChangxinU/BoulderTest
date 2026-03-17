@@ -1,0 +1,9 @@
+numpy>=1.24
+Pillow>=10.0
+opencv-python>=4.8
+pyyaml>=6.0
+# Add framework-specific packages after dataset inspection
+# Example:
+# ultralytics>=8
+# torch>=2
+# coremltools>=8
